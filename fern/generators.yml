@@ -2,4 +2,35 @@
 
 api:
   specs:
-    - openapi: openapi.yaml
+    - openapi: sutra-api-service.yaml
+
+groups:
+  python-sdk:
+    generators:
+      - name: fernapi/fern-python-sdk
+        version: 4.19.2
+        output:
+          location: pypi
+          package-name: sutrasdk
+        github:
+          repository: fern-demo/sutra-python-sdk
+        config:
+          client_class_name: sutrasdk
+        smart-casing: true
+  ts-sdk:
+    generators:
+      - name: fernapi/fern-typescript-node-sdk
+        version: 0.51.5
+        output:
+          location: npm
+          package-name: "sutrasdk"
+          # token: ${NPM_TOKEN}
+        github:
+          repository: fern-demo/sutra-typescript-sdk
+        config:
+          namespaceExport: Starter
+          allowCustomFetcher: true
+          skipResponseValidation: true
+          includeApiReference: true
+          noSerdeLayer: true
+        smart-casing: true

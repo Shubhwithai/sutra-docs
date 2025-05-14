@@ -1,44 +1,86 @@
 instances:
-  - url: plantstore.docs.buildwithfern.com # update this to {yourorg}.docs.buildwithfern.com
+  - url: twoai.docs.buildwithfern.com # update this to {yourorg}.docs.buildwithfern.com
     # custom-domain: plantstore.dev # specify your custom domain when you are ready to go live
 
-title: Plant Store
+title: TwoAI
 
 layout:
   searchbar-placement: header
   page-width: full
+  tabs-placement: header
+
+tabs:
+  docs:
+    display-name: Documentation
+    icon: book
+  api:
+    display-name: API Reference
+    icon: code
 
 navigation:
-  - section: Get Started
-    contents:
-      - page: Welcome
-        path: docs/pages/welcome.mdx
-      - page: Concepts
-        path: docs/pages/concepts.mdx
-      - page: SDKs
-        path: docs/pages/sdks.mdx
-        slug: sdks
-  - api: API Reference
+  - tab: docs
+    layout:
+      - section: Get Started
+        contents:
+          - page: Get Started With SUTRA
+            path: docs/pages/sutra.mdx
+            slug: get-started
+          - page: Models
+            path: docs/pages/models.mdx
+            slug: models
+          - page: Tokenizer
+            path: docs/pages/tokenizer.mdx
+            slug: tokenizer
+          - page: Rate Limit
+            path: docs/pages/rate-limit.mdx
+            slug: rate-limit
+          - page: Error Codes
+            path: docs/pages/error-codes.mdx
+            slug: error-codes
+          - section: Updates
+            contents:
+              - page: SUTRA-V2 Release
+                path: docs/pages/updates/sutra-v2-release.mdx
+                slug: sutra-v2-release
+              - page: SUTRA-R0 Release
+                path: docs/pages/updates/sutra-r0-release.mdx
+                slug: sutra-r0-release
+
+  - tab: api
+    layout:
+      - api: API Reference
+        skip-slug: true
+        snippets:
+          python: "sutrasdk"
+          typescript: "sutrasdk"
+
+landing-page: 
+  page: Home
+  path: docs/pages/landingpage.mdx
+
 
 navbar-links:
-  - type: minimal
+  - type: secondary
     text: Fork this repo
     url: https://github.com/fern-api/docs-starter
-  - type: filled
+  - type: primary
     text: Get a demo
     url: https://buildwithfern.com/contact?utm_campaign=demo&utm_medium=plantstore&utm_source=navbar
-  - type: github
-    value: https://github.com/fern-api/fern
 
 colors:
   accentPrimary:
-    dark: "#81C784"
-    light: "#1B5E20"
+    dark: "#001aff"
+    light: "#001aff"
+  background:
+    dark: "#000000"
+    light: "#FFFFFF"
 
 logo:
-  dark: docs/assets/logo-dark.svg
-  light: docs/assets/logo-light.svg
-  height: 20
-  href: https://buildwithfern.com/?utm_campaign=demo&utm_medium=plantstore&utm_source=logo
+  dark: docs/assets/sutra.jpeg
+  light: docs/assets/sutra.jpeg
+  height: 40
+  href: /home
 
-favicon: docs/assets/favicon.svg
+favicon: docs/assets/sutra.jpeg
+
+css: styles.css

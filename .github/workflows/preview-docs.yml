@@ -18,7 +18,7 @@ jobs:
       - name: Generate preview URL
         id: generate-docs
         env:
-          FERN_TOKEN: ${{ secrets.FERN_TOKEN }}
+          FERN_TOKEN: ${{ secrets.FERN_TOKEN }} # TODO: Remove this when we have a proper token   
         run: |
           OUTPUT=$(fern generate --docs --preview 2>&1) || true
           echo "$OUTPUT"

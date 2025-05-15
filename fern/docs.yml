@@ -22,13 +22,57 @@ navigation:
     layout:
       - section: Get Started
         contents:
-          - page: Get Started With SUTRA
-            path: docs/pages/sutra.mdx
-            slug: get-started
-          - page: Models
-            path: docs/pages/models.mdx
-            slug: models
+          - page: Introduction
+            icon: book-open
+            path: docs/pages/introduction.mdx
+            slug: introduction
+          - page: Quick Start
+            icon: rocket
+            path: docs/pages/quick-start.mdx
+            slug: quick-start
+          - section: Models
+            icon: brain
+            contents:
+              - page: Models Overview
+                icon: book
+                path: docs/pages/models/Models-Overview.mdx
+                slug: models
+
+              - page: SUTRA-V2 Guide
+                icon: book
+                path: docs/pages/models/sutra-v2-guide.mdx
+                slug: sutra-v2-guide
+
+              - page: SUTRA-R0 Guide
+                icon: book
+                path: docs/pages/models/sutra-r0-guide.mdx
+                slug: sutra-r0-guide
+
+          - section: Integrations
+            icon: code
+            contents:
+              - page: Langchain With SUTRA
+                icon: book
+                path: docs/pages/integrations/langchain-with-sutra.mdx
+                slug: langchain-with-sutra
+
+              - page: LlamaIndex With SUTRA
+                icon: book
+                path: docs/pages/integrations/llama-index-with-sutra.mdx
+                slug: llama-index-with-sutra
+
+              - page: Portkey With SUTRA
+                icon: book
+                path: docs/pages/integrations/portkey-with-sutra.mdx
+                slug: portkey-with-sutra
+
+              - page: SUTRA With LiteLLM
+                icon: book
+                path: docs/pages/integrations/sutra-with-litellm.mdx
+                slug: sutra-with-litellm
+
           - page: Tokenizer
+            icon: code
             path: docs/pages/tokenizer.mdx
             slug: tokenizer
           - page: Rate Limit
